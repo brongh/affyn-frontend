@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Arial Black;
+    font-weight: 400;
+    src: url(/fonts/ariblk.ttf);
+  }
+  @font-face {
+    font-family: New Peninim MT;
+    src: url(/fonts/new-peninim-mt-2.ttf);
+  }
+  @font-face {
+    font-family: Copperplate;
+    font-weight: 400;
+    src: url(/fonts/Copperplate.ttf);
+  }
+  @font-face {
+    font-family: Avenir Next Condensed;
+    font-weight: 400;
+    src: url(/fonts/AvenirNextCondensed.ttf);
+  }
+  @font-face {
+    font-family: Poppins Bold;
+    src: url(/fonts/Poppins-Bold.ttf);
+  }
+  @font-face {
+    font-family: Poppins Medium;
+    src: url(/fonts/Poppins-Medium.ttf);
+  }
+  @font-face {
+    font-family: Poppins Regular;
+    src: url(/fonts/Poppins-Regular.ttf);
+  }
+
+  h1.ultra {
+    font-family: New Peninim MT;
+    font-size: 80px;
+    font-weight: 700;
+    color: white;
+    @apply leading-[86px]
+  }
+  h1 {
+    font-family: New Peninim MT;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    line-height: 32px;
+    @apply text-center
+  }
+
+  h3 {
+    font-family: Copperplate;
+    @apply font-normal text-2xl text-[#84FBFD] tracking-[3px] text-center
+  }
+
+  p {
+    font-family: New Peninim MT;
+    @apply font-normal text-lg text-white leading-[20px]
+  }
+
+  p.small {
+    font-family: Poppins Regular;
+    @apply font-normal text-xs text-white
+  }
+
+  span.error {
+    font-family: poppins Regular;
+    @apply font-normal text-xs text-red-500
+  }
+
+  h4 {
+    font-family: Avenir Next Condensed;
+    @apply font-normal text-2xl text-white
+  }
+
+  h4.order {
+    font-family: Poppins Bold;
+    @apply font-bold text-white text-2xl
+  }
+
+  h4 {
+    font-family: Poppins Medium;
+    @apply font-medium text-white text-base
+  }
+
+  label {
+    font-family: Poppins Medium;
+    @apply font-medium text-white text-base
+  }
+}
+
+@layer components {
+  .hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 0.5s;
+  }
+
+  .line {
+    width: 28px;
+    height: 4px;
+    border-radius: 20px;
+    /* margin: 6px 0; */
+    background-color: #84FBFD;
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .line-1 {
+    transform-origin: center right;
+  }
+
+  .line-2 {
+    transform-origin: center;
+    margin: 6px 0;
+  }
+
+  .line-3 {
+    transform-origin: center right;
+  }
+
+  .hamburger-menu.active .line-1 {
+    transform: rotate(-40deg) scaleX(1.23) translateY(-1px);
+  }
+
+
+  .hamburger-menu.active .line-2 {
+    transform: rotate(40deg) scaleX(1.23);
+  }
+
+  .hamburger-menu.active .line-3 {
+    display: none
+  }
+}
